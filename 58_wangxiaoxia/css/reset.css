@@ -1,0 +1,41 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 37.5px;
+}
+body{
+    background: #f6f6f6;
+    position: relative;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+a{
+	color:#555;
+	text-decoration: none;
+}
+
+select{
+	list-style: none;
+}
+ol,dl,ul{
+	list-style:none;
+}
+img,input{
+	border:0;
+}
+figure{
+	margin:0;
+}
+figcaption{
+	margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: 400;
+}
+i{
+	font-style: normal;
+}

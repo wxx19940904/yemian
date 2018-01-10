@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no">	
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+ 	<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+ 	<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript">
+	var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+	//计算比例
+	// var per = clientWidth / 375;
+	if (clientWidth>414){
+		clientWidth = 414;
+	} 
+	if(clientWidth<360) {
+		clientWidth=360;
+	}
+	document.documentElement.style.fontSize = clientWidth / 10 +"px";
+
+	window.onresize = function(){
+		var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+		// var per = clientWidth / 375;
+	if (clientWidth>414){
+		clientWidth = 414;
+	} 
+	if(clientWidth<360) {
+		clientWidth=360;
+	}
+
+		document.documentElement.style.fontSize = clientWidth / 10 +"px"; 	
+		
+	};	
+</script>
+</head>
+<body>
+	<header class="header fixed">
+		<a href="" class="logo"><span class="logo-text">5</span>8</a>
+		<a href="" class="city"><span class="city-text">北京</span></a>
+		<a  class="search-input">找工作 找房子</a>
+		<a href="" class="my">我的</a>
+		<a href="" class="send">发布</a>
+	</header>
+	<script type="text/javascript">
+		$('.search-input').on("click",function(){
+			$(".search-content").show();
+		})
+	</script>
+	<ul class="mnue">
+		<li class="icon" >
+			<a href="">
+				<i id="job"></i>
+				<span>招聘</span>
+			</a>
+		</li>
+		<li class="icon" >
+			<a href="">
+				<i id="house"></i>
+				<span>房产</span>
+			</a>
+		</li>
+		<li class="icon" >
+			<a href="">
+				<i id="car"></i>
+				<span>二手车新车</span>
+			</a>
+		</li>
+		<li class="icon" >
+			<a href="">
+				<i id="sale"></i>
+				<span>二手</span>
+			</a>
+		</li>
+		<li class="icon" >
+			<a href="">
+				<i id="pets"></i>
+				<span>宠物</span>
+			</a>
+		</li>
+		<li class="icon" >
+			<a href="">
+				<i id="jianzhi"></i>
+				<span>兼职</span>
+			</a>
+		</li>
+		<li class="icon" >
+			<a href="">
+				<i id="shenghuo"></i>
+				<span>本地</span>
+			</a>
+		</li>
+		<li class="icon" >
+			<a href="">
+				<i id="jiazheng"></i>
+				<span>家政</span>
+			</a>
+		</li>
+		<li class="icon" >
+			<a href="" >
+				<i id="gold"></i>
+				<span>金币夺宝</span>
+			</a>
+		</li>
+		<li class="icon">
+			<a href="">
+				<i id="task" ></i>
+				<span>送现金</span>
+			</a>
+		</li>
+	</ul>
+	<div class="scoll">
+		<div class="head-message">
+			<i class="icon1"></i>
+		</div>
+		<div class="news" onmouseover="end()" onmouseout="begin()">
+			<ul class="text1">
+				<li>
+					<a href="">
+						<i class="ballOnepx">热门	</i>
+						<span>买房为什么不要选顶楼? 后果你承受不起</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="ballOnepx">热点	</i>
+						<span>四类农村房屋可领取补助金10万元! 看看你家符不符合</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="ballOnepx">热门	</i>
+						<span>买房为什么不要选顶楼? 后果你承受不起</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="ballOnepx">热点	</i>
+						<span>四类农村房屋可领取补助金10万元! 看看你家符不符合</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="ballOnepx">热门	</i>
+						<span>买房为什么不要选顶楼? 后果你承受不起</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="ballOnepx">热点	</i>
+						<span>四类农村房屋可领取补助金10万元! 看看你家符不符合</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="ballOnepx">热门	</i>
+						<span>买房为什么不要选顶楼? 后果你承受不起</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="ballOnepx">热点	</i>
+						<span>四类农村房屋可领取补助金10万元! 看看你家符不符合</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="ballOnepx">热门	</i>
+						<span>买房为什么不要选顶楼? 后果你承受不起</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="ballOnepx">热点	</i>
+						<span>四类农村房屋可领取补助金10万元! 看看你家符不符合</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="ballOnepx">热门	</i>
+						<span>买房为什么不要选顶楼? 后果你承受不起</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="ballOnepx">热点	</i>
+						<span>四类农村房屋可领取补助金10万元! 看看你家符不符合</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="text2"></ul>
+		</div>
+<script type="text/javascript">
+	var t = setInterval(move,20);
+	var oDiv= document.querySelector(".news")
+	var t1 = document.querySelector('.text1');
+	var t2 = document.querySelector('.text2');
+	t2.innerHTML=t1.innerHTML;
+	function move(){
+        if(oDiv.scrollTop>t1.offsetHeight){
+        	oDiv.scrollTop=0;
+        }else{
+        	oDiv.scrollTop++;
+        }
+	}
+	function end(){
+		clearInterval(t);
+	}
+	function begin(){
+		t = setInterval(move,20);
+	}
+</script>
+	</div>
+	<div class="run">
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+			       	<div class="swiper-slide"><img src="img/n_v2323f5371068140048c454815f84670fd_d8507c0c4aac1c28.jpg"></div>
+			       	<div class="swiper-slide"><img src="img/16d2bd2c8850748a6f5837.png"></div>
+		    </div>
+		    <div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="find-job">
+			<div class="find-job-mnue">
+				<a href="" class="title">全职招聘</a>
+				<a href="" class="publish">发职位</a>
+				<a href="" class="write">写简历</a>
+			</div>
+			<div class="find-job-content">
+				<ul>
+					<li><a href="">工人</a></li>
+					<li><a href="">营业员</a></li>
+					<li><a href="">快递员</a></li>
+					<li><a href="">司机</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+				</ul>
+			</div>
+			<div class="sale_area">
+				<a href="">
+					<span>五险一金</span>
+				</a>
+				<a href="">
+					<span class="sale_active">包吃住</span>
+				</a>
+				<a href="">
+					<span>校招网申</span>
+				</a>
+		</div>
+		<div class="find-job">
+			<div class="find-job-mnue">
+				<a href="" class="title">全职招聘</a>
+				<a href="" class="publish">发职位</a>
+				<a href="" class="write">写简历</a>
+			</div>
+			<div class="find-job-content">
+				<ul>
+					<li><a href="">工人</a></li>
+					<li><a href="">营业员</a></li>
+					<li><a href="">快递员</a></li>
+					<li><a href="">司机</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+				</ul>
+			</div>		
+			<div class="sale_area">
+				<a href="">
+					<span>五险一金</span>
+				</a>
+				<a href="">
+					<span class="sale_active">包吃住</span>
+				</a>
+				<a href="">
+					<span>校招网申</span>
+				</a>
+		</div>
+		<div class="find-job">
+			<div class="find-job-mnue">
+				<a href="" class="title">全职招聘</a>
+				<a href="" class="publish">发职位</a>
+				<a href="" class="write">写简历</a>
+			</div>
+			<div class="find-job-content">
+				<ul>
+					<li><a href="">工人</a></li>
+					<li><a href="">营业员</a></li>
+					<li><a href="">快递员</a></li>
+					<li><a href="">司机</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+					<li><a href="">工人</a></li>
+				</ul>
+			</div>
+			<div class="sale_area">
+				<a href="">
+					<span>五险一金</span>
+				</a>
+				<a href="">
+					<span class="sale_active">包吃住</span>
+				</a>
+				<a href="">
+					<span>校招网申</span>
+				</a>
+		</div>
+		<div class="find-job">
+			<div class="find-job-mnue">
+				<a href="" class="title1">海外生活</a>
+			</div>
+			<div class="find-job-content">
+				<ul>
+					<li><a href="">海外置业</a></li>
+					<li><a href="">移民律师</a></li>
+					<li><a href="">留学服务</a></li>
+					<li><a href="">各国美食</a></li>
+				</ul>
+			</div>					
+	</div>
+	<div class="module-line"></div>
+	<footer class="footer">
+		<ul class="footer-nav">
+			<li >
+				<a href="" >
+					<span class="footer-icon"><i class="putong"></i></span>
+					 普通版 
+				</a>
+			</li>
+			<li >
+				<a href="" id="chuping">
+					<span class="footer-icon"><i class="chuping"></i></span>
+					 触屏版 
+				</a>
+			</li>			
+			<li >
+				<a href="" >
+					<span class="footer-icon"><i class="pc"></i></span>
+					 电脑版 
+				</a>
+			</li>
+			<li >
+				<a href="" >
+					<span class="footer-icon"><i class="app"></i></span>
+					  58APP  
+				</a>
+			</li>
+			<li >
+				<a href="" >
+					<span class="footer-icon"><i class="weixin"></i></span>
+					  58微信  
+				</a>
+			</li>
+		</ul>
+		<div class="footer_cop" id="footer_cop">  
+			<a href=""> 汽车票查询 </a>  
+			<a href=""> 北京58到家 </a>  
+			<a href=""> 58招才猫 </a>  
+			<a href=""> 北京大学排名 </a>  
+			<a href=""> 梦婚礼 </a>   
+		</div>
+		<div class="footer-line"><div class="footer-logo"></div></div>
+		<div class="footer-bar">
+			<a href="">登录/注册</a>
+			<a href="">电话冒用</a>
+			<a href="">用户反馈</a>
+			<a href="">隐私权条款</a>
+		</div>
+		<div class="footer-copyright">
+			<p>京公网备案信息11010502000809</p>
+			<p>京ICP证<a href="" class="footer-copyright-a">060405</a> | 京ICP备
+			<a href="" class="footer-copyright-a">10012705</a>号-2</p>
+		</div>
+	</footer>
+	<div class="bottom-fixed" style="display: block;">
+		<a href="" class="gotop"></a>
+	</div>
+	<script type="text/javascript">
+		$('.bottom-fixed').click(function(){
+			document.documentElement.scrollTop = document.body.scrollTop =0;
+		})
+	</script>
+	<div class="bottom-message">
+		<img src="img/logo.png">
+		<p>APP 速度快1倍，流量省80%</p>
+		<span>立即打开</span>
+		<i class="close"></i>
+	</div>
+	<script type="text/javascript">
+		$(".close").on("click",function(){
+			$(".bottom-message").hide();
+		})
+	</script>
+	<div class="search-content">
+		<form action="" class="form1">
+			<div class="search_input">
+				<input type="text" placeholder="全民涨薪季" class="input_keys">
+				<!-- <div class="delBtn"></div> -->
+				<a href="index.html" class="search_cancel">取消</a>			
+			</div>
+		</form>
+		<script type="text/javascript">
+			$(".input_keys").on("focus",function(){
+				$(".input_keys").attr("placeholder","");
+			})
+		</script>
+		<div class="search_ajax"></div>
+		<div class="no-search">
+			<ul class="search_tab">
+				<li class="no-search-l">最近搜索</li>
+				<li class="no-search-r on">热门搜索</li>
+			</ul>
+		<script type="text/javascript">
+			// 点击li标签时显示对应的div
+		$('li').click(function(){
+			// 获取li标签对应的下标
+			var index = $(this).addClass("on").siblings().removeClass("on").end().index();
+			// 通过对应的下标显示div
+			if(index == 0){
+				$('.hot-s').hide();
+			} else {
+				$('.hot-s').show();	
+			}
+		});
+		</script>
+			<ul class="hot-s">
+				<li><a href="">鱼缸</a></li>
+				<li><a href="">淘宝美工</a></li>
+				<li><a href="">拼车顺风车</a></li>
+				<li><a href="">夜班</a></li>
+				<li><a href="">日结</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+  var mySwiper = new Swiper ('.swiper-container', {
+   pagination: '.swiper-pagination',
+   slidesPerView: 1,
+   paginationClickable: true,
+   spaceBetween: 30,
+   loop: true,
+   autoplay:1500,
+   autoplayDisableOnInteraction: false
+ });
+</script>
+</html>
