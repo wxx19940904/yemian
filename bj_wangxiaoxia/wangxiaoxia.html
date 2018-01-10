@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		canvas{
+			/*border: 2px solid black;*/
+			display:block;
+			margin: 0 auto;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -330px;
+			margin-top: -300px;
+			width: 800px;
+			height: 400px
+		}
+	</style>
+</head>
+<body>
+	<canvas id = "cv" width="800" height="400">您的浏览器不支持canvas！</canvas>
+</body>
+<script type="text/javascript">
+	//选中canvas对象
+	var cv = document.getElementById("cv");
+	try{
+		//获取图形绘制对象
+		var ct = cv.getContext("2d");
+
+		// 将图片存入数组中
+		var imgArr = ["192f06d919490e4d-d337b8b9e7b982e7-84ff809870286446d60dce10770cf0f6.jpg","192f06d919490e4d-d337b8b9e7b982e7-97234767eb21c471d537836244900f7d.jpg","aa48140b4cf08ccd-23c028ba21e0bb1a-dc0c2bf2e595658baedcc860b731e664.jpg","aa48140b4cf08ccd-23c028ba21e0bb1a-e3966b5389aab7a8ebcc70c9bf047c19.jpg","fce1d6cb509ef9fd-daadca6a06f4addf-43d91300412fc6ef8585c1af03d68e04.jpg"];
+		var t = setInterval(changeimg,1000);
+		var n = 0;
+		function changeimg(){
+			ct.save();
+			ct.clearRect(0,0,800,400);		
+			//创建线性渐变
+			var grad = ct.createLinearGradient(10, 0, 110, 0);
+			grad.addColorStop(0, "#0ff");
+			grad.addColorStop(0.5, "#fff");
+			grad.addColorStop(1, "#0ff");
+
+			ct.fillStyle = grad;
+
+			ct.beginPath();
+			ct.arc(500, 500, 500, 1*Math.PI, 1.5*Math.PI);
+			var grad2 = ct.createLinearGradient(500, 0, 0, 500);
+			grad2.addColorStop(0, "#fff");
+			grad2.addColorStop(0.2, "#fff");
+			grad2.addColorStop(0.4, "#00f");
+			grad2.addColorStop(0.5, "#00f");
+			grad2.addColorStop(0.7, "blue");
+			grad2.addColorStop(0.8, "#fff");
+			grad2.addColorStop(1, "#fff");
+			ct.lineWidth = 20;
+			ct.strokeStyle = grad2;
+
+			//文本
+			ct.font = "36px 微软雅黑";
+			ct.lineWidth = 5;
+			ct.strokeText("哆 啦 A 梦 的 表 情", 90, 160);
+			ct.fillText("哆 啦 A 梦 的 表 情", 90, 160);
+
+			//获取图片对象
+			var img = document.createElement("img");
+			var img1 = document.createElement('img');
+			img.src = "a7cc9703212713de38c561fd4c1bf036.png";
+			img1.src=imgArr[n];
+			img.onload = function(){
+				ct.drawImage(img, 10, 140);
+			}
+			img1.onload = function(){
+				ct.drawImage(img1, 490, 90, 256, 256);				
+			}
+			if(n>imgArr.length-1){
+				n=0;
+				m = setTimeout(changeimg,1);
+			}
+				n++;	
+		}
+		
+	}catch(e){
+		console.log(e);
+	}
+		var practicles = [];
+		 for (var i = 0; i < 500; i++) {//循环生成500粒
+			 practicles.push({
+			 x: Math.random()*(window.innerWidth),
+			 y: Math.random()*(window.innerHeight),
+			 vx: Math.random()-0.5,
+			 vy: Math.random()+0.5,
+			 size: Math.random()*3+1,
+			 color: "#0F0"
+			 })
+		 }
+		 function timeUpdate(){
+		 ct.clearRect(0,0,window.innerWidth,window.innerHeight);//清除画布区域
+		 var practicle;
+		 for (var i = 0; i < 500; i++) {
+			 var practicle = practicles[i];
+			 practicle.x += practicles[i].vx;
+			 practicle.y += practicles[i].vy;
+			 if (practicle.x<0) {practicle.x=window.innerWidth}
+			 if (practicle.x>window.innerWidth) {practicle.x=0}
+			 if (practicle.y>window.innerHeight) {practicle.y=0}
+			 ct.beginPath();
+			 ct.arc(practicle.x,practicle.y,practicle.size,0,Math.PI*2)
+			 ct.closePath();
+			 ct.fillStyle = practicle.color;
+			 ct.fill();
+			 }
+		 }
+		 setInterval(timeUpdate,40);	
+</script>
+</html>
