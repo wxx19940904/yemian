@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no">	
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/page.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+ 	<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+ 	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript">
+	var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+	//计算比例
+	var per = clientWidth / 375;
+
+	document.documentElement.style.fontSize = per* 104.167 +"px";
+
+	window.onresize = function(){
+		var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+		//计算比例
+
+		var per = clientWidth / 375;
+
+		document.documentElement.style.fontSize = per* 104.167 +"px"; 	
+	};	
+	</script>
+</head>
+<body>
+	<header class="header">
+		<div class="logo">
+			<h1 class="logo-type">赶集网</h1>
+			<a href="" class="city"><span>北京</span><i class="header-icon"></i></a>
+			<p class="site-nav">
+				<a href="" >
+					<i class="ucenter"></i><span class="tp">我的</span>
+				</a>
+				<a href="" >
+					<i class="publish"></i><span class="tp">发布</span>
+				</a>				
+			</p>	
+		</div>
+		<div class="headbg"></div>
+	</header>
+	<script type="text/javascript">
+	var head = document.querySelector('.header');
+	window.onscroll=function(){
+	var res = parseInt(document.documentElement.scrollTop || document.body.scrollTop);
+		if (res>230){
+			head.style.transiton = "all .5s";
+			head.style.backgroundColor="#39bc30";
+			head.style.padding = "0.1rem 0";
+		}else{
+			head.style.transiton = "all .5s";
+			head.style.backgroundColor="";
+		}
+	}
+
+	</script>
+	<div class="run">
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+			       	<div class="swiper-slide"><img src="img/67e639c8850f431bb346283d1e2a32fb_0-0_7-5.png"></div>
+			       	<div class="swiper-slide"><img src="img/671e4c82eddf4f269be1ae9034928245_0-0_7-5.png"></div>
+			       	<div class="swiper-slide"><img src="img/9891c2295ced415c8f4cc83d3b4b2d5f_0-0_7-5.jpg"></div>
+		    </div>
+		    <div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<ul class="mnue">
+		<li><a href="" class="icon"><i class="qw"></i><span>全职工作</span></a></li>
+		<li><a href="" class="icon"><i class="jw"></i><span>兼职工作</span></a></li>
+		<li><a href="" class="icon"><i class="esc"></i><span>二手车</span></a></li>
+		<li><a href="" class="icon"><i class="esw"></i><span>二手物品</span></a></li>
+		<li><a href="" class="icon"><i class="zf"></i><span>租房</span></a></li>
+		<li><a href="" class="icon"><i class="esf"></i><span>二手房</span></a></li>
+		<li><a href="" class="icon"><i class="cw"></i><span>宠物</span></a></li>
+		<li><a href="" class="icon"><i class="bd"></i><span>本地生活</span></a></li>
+	</ul>
+	<div class="search">
+		<form action="" data-role="form">
+			<div class="search-inputs">
+				<div class="search-val" id="searchVal">找工作 找房子 找服务</div>
+				<input data-role="submit" type="submit" value="" class="pub-icons search-submit">
+			</div>
+		</form>
+	</div>
+	<div class="news">
+		<div class="info-icon"></div>
+		<div class="scoll">
+			<span>职场中如果你有这三个问题你会活的很累</span>
+		<i class="arrow">	</i>
+		</div>
+	</div>
+	<div class="module-line"></div>
+	<div class="module-area">
+		<div class="module-area-t">
+			<a href="" class="type"><h2>全职工作<i></i></h2></a>
+			<a href="" class="pub fr">发现好工作</a>
+			<a href="" class="pub fr">写简历</a>
+		</div>
+		<ul class="module-area-b">
+			<li><a href="">技工</a></li>
+			<li><a href="">司机</a></li>
+			<li><a href="">服务员</a></li>
+			<li><a href="">餐饮</a></li>
+			<li><a href="">人力资源</a></li>
+			<li><a href="">销售</a></li>
+			<li><a href="">文员</a></li>
+			<li><a href="">营业员</a></li>
+			<li><a href="" class="active">普工</a></li>
+			<li><a href="">仓库管理</a></li>
+			<li><a href="">保安</a></li>
+			<li><a href="">导购</a></li>
+			<li><a href="">收银员</a></li>
+			<li><a href="">教师</a></li>
+			<li><a href="">行政后勤</a></li>
+			<li><a href="">家政</a></li>
+			<li><a href="">保洁</a></li>
+			<li><a href="">快递员</a></li>
+			<li><a href="">财务</a></li>
+			<li><a href="">更多</a></li>
+		</ul>
+		<div class="sale-area clear">
+			<a href="" class="icon-hot">包吃住<i class="fi"></i></a>
+			<a href="">五险一金</a><a href="">周末双休</a>
+			<a href="">附近好工作</a>
+		</div>
+		<div class="module-line"></div>
+	</div>
+	<footer class="footer">
+		<div class="footer-nav">
+			<div class="nav-t">
+				<a href="">全职工作</a>
+				<a href="">兼职工作</a>
+				<a href="">二手车</a>
+				<a href="">二手物品</a>
+			</div>
+			<div class="hot-line"></div>	
+			<div class="nav-t">
+				<a href="">租房</a>
+				<a href="">买房</a>
+				<a href="">宠物</a>
+				<a href="">本地生活</a>
+			</div>		
+		</div>
+		<div class="footer-img">
+			<a href="">
+				<i class="point"></i>
+				<span class="now-type">触屏版</span>
+			</a>
+			<a href="">
+				<i class="computer"></i>
+				<span class="now-type">电脑版</span>
+			</a>
+			<a href="">
+				<i class="severice"></i>
+				<span class="now-type">客户端</span>
+			</a>
+			<a href="">
+				<i class="tel"></i>
+				<span class="now-type">微信</span>
+			</a>
+		</div>
+		<div class="feedback-links clear">
+			<a  href="" class="first" >意见反馈</a><a href="" >手机号被冒用</a><a  href="">服务条款</a>
+		</div>
+		<div class="copyright"><span>赶集网&nbsp;-&nbsp;更专业的分类信息网</span></div>
+	</footer>
+</body>
+<script type="text/javascript">
+  var mySwiper = new Swiper ('.swiper-container', {
+   pagination: '.swiper-pagination',
+   slidesPerView: 1,
+   paginationClickable: true,
+   spaceBetween: 30,
+   loop: true,
+   autoplay:1500,
+   autoplayDisableOnInteraction: false
+ });
+</script>
+</html>

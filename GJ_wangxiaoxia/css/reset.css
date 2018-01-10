@@ -1,0 +1,40 @@
+@charset "utf-8";
+body,html,ul,ol,dl,img,div,h1,h2,h3,h4,h5,h6,p,input,a,select,li{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 104.167px;
+}
+body{
+    font: 0.13rem/2em sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #404040;	
+}
+a{
+	color:#333;
+	text-decoration: none;
+}
+select{
+	list-style: none;
+}
+ol,dl,ul{
+	list-style:none;
+}
+img,input{
+	border:0;
+}
+figure{
+	margin:0;
+}
+figcaption{
+	margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: bold;
+}
+.w{
+	width:1200px;
+	margin: 0 auto;
+}
